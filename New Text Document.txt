@@ -1,0 +1,64 @@
+🔐 PenTest Lab: Local Web App Vulnerability Testing
+🧠 Objective
+Create a simple, intentionally vulnerable web application and document how to find and exploit its flaws using popular penetration testing tools. Ideal for learning ethical hacking basics in a legal, offline environment.
+
+📁 Project Structure
+pgsql
+Copy
+Edit
+pentest-lab/
+├── vulnerable-app/
+│   ├── app.py
+│   ├── templates/
+│   │   └── login.html
+│   └── requirements.txt
+├── exploits/
+│   ├── sql_injection.md
+│   ├── xss.md
+│   └── brute_force.md
+├── README.md
+└── LICENSE
+🧰 Tools Used
+Python + Flask (vulnerable web app)
+
+sqlmap for SQL injection
+
+Burp Suite or OWASP ZAP for interception
+
+Hydra for brute force login
+
+Browser dev tools (for XSS testing)
+
+📌 Vulnerabilities to Include
+SQL Injection – login form vulnerable to ' OR '1'='1
+
+Reflected XSS – user input not sanitized
+
+Brute Force – weak login system, no rate limiting
+
+🚀 Getting Started
+In your README.md, include:
+
+bash
+Copy
+Edit
+# Clone the repo
+git clone https://github.com/yourusername/pentest-lab.git
+cd pentest-lab/vulnerable-app
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
+Then guide users through each exploit using markdown files in /exploits/.
+
+🔐 Disclaimer
+Add this to your README.md:
+
+This project is for educational purposes only. Do not use these techniques on systems you do not own or have explicit permission to test.
+
